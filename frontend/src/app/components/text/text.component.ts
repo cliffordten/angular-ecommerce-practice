@@ -12,12 +12,12 @@ import { ClassValue } from 'clsx';
   styleUrl: './text.component.scss'
 })
 export class TextComponent implements OnInit{
-  value = input.required<String>()
-  isTitle = input<Boolean>(false)
+  value = input.required<string>()
+  isTitle = input<boolean>(false)
   variant = input<IVariant>("base")
   fontStyles = input<IFontStyle[]>(["normal"])
-  className = input<ClassValue[]>()
-  classes = signal<String[]>([""])
+  className = input<ClassValue>()
+  classes = signal<string[]>([""])
 
   utilsService = inject(UtilsService)
 

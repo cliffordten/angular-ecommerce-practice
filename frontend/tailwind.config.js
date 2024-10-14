@@ -5,6 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        family: ["Lato", 'sans-serif'],
+      },
       colors: {
         success: '#28a745',
         danger: '#dc3545',

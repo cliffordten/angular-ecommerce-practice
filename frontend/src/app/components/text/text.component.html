@@ -1,5 +1,5 @@
 @if (isTitle()) {
-<h2 [ngClass]="cn(['text-2xl text-title', classes, className])">{{value()}}</h2>
+<h2 [ngClass]="cn(['text-2xl text-title font-family', classes(), className()])">{{value()}}</h2>
 }@else {
-<p [ngClass]="cn(['text-base text-text font-light', classes, className])">{{value()}}</p>
+<p [ngClass]="cn(['text-base text-text font-family', classes(), className()])">{{value()}}</p>
 }

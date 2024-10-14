@@ -1,0 +1,31 @@
+<header class="flex items-center w-full container justify-between mx-auto py-8">
+    @for (heading of headerTitles ; track $index) {
+    <div class="flex items-center gap-4">
+        @for (header of heading ; track $index) {
+        @if(header.isLogo){
+        <div [routerLink]="header.link">
+            <span class="flex items-center">
+                <app-text value="BR." variant="xlarge" [isTitle]="true" className="text-title font-extrabold" />
+                <app-text value="F" variant="xlarge" [isTitle]="true" className="text-gray-300 font-extrabold" />
+            </span>
+        </div>
+        } @else if(header.isSearch){
+        <div>
+            <div class="flex items-center bg-gray-100 min-w-[350px] pl-3 rounded-xl py-1">
+                <ng-icon name="lucideSearch" class="text-gray-500 text-xl" />
+                <input hlmInput placeholder="search" type="search"
+                    class="bg-gray-100 text-gray-500 outline-none border-none w-full" />
+            </div>
+        </div>
+        }
+        @else{
+        <div>
+            <button hlmBtn [class]="$index %2 ===1? 'bg-white border border-primary ': ''"><app-text
+                    [value]="header.title" [className]="$index %2 ===1? 'text-primary': 'text-white'" /></button>
+        </div>
+        }
+
+        }
+    </div>
+    }
+</header>

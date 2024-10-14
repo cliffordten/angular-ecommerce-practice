@@ -33,6 +33,12 @@
       ],
       "@spartan-ng/ui-button-helm": [
         "./src/libs/ui/ui-button-helm/src/index.ts"
+      ],
+      "@spartan-ng/ui-dialog-helm": [
+        "./src/libs/ui/ui-dialog-helm/src/index.ts"
+      ],
+      "@spartan-ng/ui-label-helm": [
+        "./src/libs/ui/ui-label-helm/src/index.ts"
       ]
     }
   },
